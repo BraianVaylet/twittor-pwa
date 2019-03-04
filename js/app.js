@@ -10,7 +10,7 @@ if ( navigator.serviceWorker ) {
     console.log('incluimos sw.js file.');
 
     if(url.includes('localhost')){
-        swLocation = './sw.js';
+        swLocation = '/sw.js';
     }
 
     navigator.serviceWorker.register(swLocation);
