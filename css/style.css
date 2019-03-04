@@ -11,6 +11,13 @@
     font-size: 16px;
     background-color: #dde1e2; 
     width: 100%;
+
+    /* quita el pull to reject para android */
+    overscroll-behavior-y: contain;
+    /* coorecciones para IOS */
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 }
 
 /* Personalizados */
