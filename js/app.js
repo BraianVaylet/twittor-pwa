@@ -2,10 +2,18 @@
 
 console.log('entre en app.js');
 
+const url = window.location.href;
+var swLocation = 'twittor-pwa/sw.js'; // donde se encuentra el sw en producción.
+
 // invocamos al Service Worker.
 if ( navigator.serviceWorker ) {
     console.log('incluimos sw.js file.');
-    navigator.serviceWorker.register('./sw.js');
+
+    if(url.includes('localhost')){
+        swLocation = './sw.js';
+    }
+    
+    navigator.serviceWorker.register(swLocation);
 }
 
 
